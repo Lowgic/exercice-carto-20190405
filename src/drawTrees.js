@@ -1,17 +1,18 @@
 import { path } from 'ramda'
-import atms from '../data/atm.json'
+import trees from '../data/trees.json'
 
 export default (svg, projection) => {
   const getTransform = feature => {
     const point = projection(path(['geometry', 'coordinates'], feature))
     return `translate(${point[0]},${point[1]})`
   }
-  svg.selectAll('text.atm')
-    .data(atms.features)
+
+  svg.selectAll('text.trees')
+    .data(trees.features)
     .enter()
     .append('text')
-    .attr('class', 'atm')
+    .attr('class', 'trees')
     .attr('transform', getTransform)
     .attr('fill', 'green')
-    .text('💰')
+    .text('🌲')
 }

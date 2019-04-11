@@ -13,10 +13,11 @@
   "license": "ISC",
   "devDependencies": {
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "d3": "^5.9.1",
+    "d3": "^5.9.2",
+    "node-fetch": "^2.3.0",
     "ramda": "^0.26.1"
   }
 }
